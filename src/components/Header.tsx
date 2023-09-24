@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/Header.css";
+import BaseButton from "./ui/button/BaseButton";
 
 export const Header = (): JSX.Element => {
   return (
@@ -35,6 +36,7 @@ export const Header = (): JSX.Element => {
           </select>
         </label>
         <input className="btn" type="submit" value="検索" />
+        <BaseButton text="文字列"></BaseButton>
       </form>
     </header>
   );
