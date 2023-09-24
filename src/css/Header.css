@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    padding: 3vw;
+    justify-content: space-between;
+}
+
+.ttl {
+    font-size: 30px;
+    color: #F5C800;
+}
+
+/* フルーツ名検索の入力フォーム */
+.search-box {
+    width: 22vw;
+    padding: 1vw 2vw;
+    border: 1px solid #E0DFDE;
+    border-radius: 5px;
+}
+
+/* セレクトボックス矢印 */
+.select-box {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 1.2vw;
+        width: 10px;
+        height: 7px;
+        background-color: #A69889;
+        clip-path: polygon(0 0, 100% 0, 50% 100%);
+        pointer-events: none;
+    }
+}
+
+/* セレクトボックス */
+.select-box select {
+    width: 10.5vw;
+    appearance: none;
+    padding: 1vw 1.2vw 1vw 1.2vw;
+    color: #A69889;
+    border: 1px solid #E0DFDE;
+    background-color: #F7F7F7;
+    border-radius: 3px;
+}
+
+/* 検索ボタン */
+.btn {
+    width: 8vw;
+    padding: .8vw 1.5vw;
+    color: #FDFEFE;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(212, 137, 57, 0.7);
+}

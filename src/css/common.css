@@ -1,0 +1,16 @@
+body {
+    background-color: #FDFEFE;
+}
+
+input,
+select {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+::placeholder {
+    color: #E0DFDE;
+}
