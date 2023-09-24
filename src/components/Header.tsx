@@ -52,7 +52,7 @@ export const Header = (): JSX.Element => {
           change={selectPrice}
         ></BaseSelect>
         <input className="btn" type="submit" value="検索" />
-        <BaseButton text="文字列"></BaseButton>
+        <BaseButton text="検索"></BaseButton>
       </form>
     </header>
   );
