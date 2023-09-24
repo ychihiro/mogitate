@@ -2,8 +2,9 @@ import React from "react";
 import "../css/Header.css";
 import BaseButton from "./ui/button/BaseButton";
 import BaseSelect from "./ui/select/BaseSelect";
+import BaseInput from "./ui/input/BaseInput";
 
-export const Header = (): JSX.Element => {
+export const Header: React.FC = () => {
   const seasonList = [
     { label: "", value: null },
     { label: "春", value: 1 },
@@ -33,12 +34,11 @@ export const Header = (): JSX.Element => {
     <header className="header">
       <h1 className="ttl">mogitate</h1>
       <form action="post">
-        <input
-          className="search-box"
-          type="text"
-          name="name"
+        <BaseInput
+          id="fruit"
           placeholder="フルーツの名前を入力してください"
-        />
+          variant="outlined"
+        ></BaseInput>
         <BaseSelect
           id="season"
           label="季節を選ぶ"
@@ -51,7 +51,6 @@ export const Header = (): JSX.Element => {
           menus={priceList}
           change={selectPrice}
         ></BaseSelect>
-        <input className="btn" type="submit" value="検索" />
         <BaseButton text="検索"></BaseButton>
       </form>
     </header>

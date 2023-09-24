@@ -3,6 +3,7 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  styled,
   type SelectChangeEvent,
 } from "@mui/material";
 import React from "react";
@@ -23,10 +24,10 @@ export const BaseButton: React.FC<Props> = (props) => {
   const [selectValue, setSelectValue] = React.useState<string | undefined>();
 
   // ドロップダウンメニューの値が変更された時の処理
-  const onChange = (event: SelectChangeEvent): void => {
+  const onChange = (event: SelectChangeEvent<unknown>): void => {
     console.log("onChange");
     console.log(selectValue);
-    setSelectValue(event.target.value);
+    setSelectValue(event.target.value as string);
     props.change();
   };
 
@@ -39,10 +40,18 @@ export const BaseButton: React.FC<Props> = (props) => {
     );
   });
 
+  const StyledSelect = styled(Select)(() => ({
+    ".MuiSelect-select": {
+      color: "#9B8888",
+      backgroundColor: "#F7F7F7",
+      border: "1px solid #E0DFDE",
+    },
+  }));
+
   return (
     <FormControl fullWidth>
       <InputLabel id={props.id}>{props.label}</InputLabel>
-      <Select
+      <StyledSelect
         labelId={props.id}
         id="select"
         value={selectValue}
@@ -50,7 +59,7 @@ export const BaseButton: React.FC<Props> = (props) => {
         onChange={onChange}
       >
         {menuList}
-      </Select>
+      </StyledSelect>
     </FormControl>
   );
 };
