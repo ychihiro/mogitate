@@ -59,6 +59,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 featuresディレクトリは以下のような構成になっています。
 
+```
 features/
 ├─ generic/
 ├─ todo/
@@ -69,6 +70,7 @@ features/
 │ ├─ (todo.constant.ts)
 │ ├─ (todo.type.ts)
 │ └─ (todo.validation.ts)
+```
 
 - actions.tsにはその機能で使うRecoilのロジックを記述します。
 - [feature].constant.tsにはその機能で使う定数を記述します。
@@ -110,5 +112,5 @@ ReactQueryとrecoilは使用する際に一意なキーを設定しなければ�
 
 ## 参考資料
 
-[](https://tech-blog.rakus.co.jp/entry/20230208/frontend)
-[](https://zenn.dev/sakito/articles/af87061a5016e6)
+[https://tech-blog.rakus.co.jp/entry/20230208/frontend](https://tech-blog.rakus.co.jp/entry/20230208/frontend)
+[https://zenn.dev/sakito/articles/af87061a5016e6](https://zenn.dev/sakito/articles/af87061a5016e6)
