@@ -1,6 +1,5 @@
 import React from "react";
-import BaseLayout from "./components/ui/layout/BaseLayout";
-import Header from "./components/Header";
+import { BaseLayout } from "./components/ui/index";
 import DetailPage from "./components/DetailPage";
 
 export const App = (): JSX.Element => {
@@ -15,7 +14,6 @@ export const App = (): JSX.Element => {
           <p>¥800</p>
         </div>
       </main> */}
-      <Header></Header>
       <DetailPage></DetailPage>
     </div>
   );
