@@ -44,58 +44,73 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
 # mogitate
 
 ## ディレクトリ構成について
 
 ## ui
+
 基本的にはMUIのコンポーネントをラップし、独自にスタイルを当てたコンポーネント群になり、ドメインを持たせないようにします。<br>
 コンポーネントがドメインを持つか、持たないかは、そのコンポーネントをそのまま別のプロジェクトで使い回すことができるか、否かで判断します。<br>
 またReactHookFormを使っている場合は、同じuiディレクトリ内にReactHookFormのロジックを付加したコンポーネントを配置します。
+
 ### features
+
 featuresディレクトリは以下のような構成になっています。
 
+```
 features/
 ├─ generic/
 ├─ todo/
-│  ├─ container/
-│  ├─ presenter/
-│  ├─ hooks/
-│  ├─ (actions.ts)
-│  ├─ (todo.constant.ts)
-│  ├─ (todo.type.ts)
-│  └─ (todo.validation.ts)
+│ ├─ container/
+│ ├─ presenter/
+│ ├─ hooks/
+│ ├─ (actions.ts)
+│ ├─ (todo.constant.ts)
+│ ├─ (todo.type.ts)
+│ └─ (todo.validation.ts)
+```
 
 - actions.tsにはその機能で使うRecoilのロジックを記述します。
 - [feature].constant.tsにはその機能で使う定数を記述します。
 - [feature].type.tsには型を記述します。
 - [feature].validation.tsにはzodで定義するschemeを記述します。
-基本的にはこれらのファイルは無くてもよく、コードの見通しが悪くなってきたら作るというユルい運用をしています。
+  基本的にはこれらのファイルは無くてもよく、コードの見通しが悪くなってきたら作るというユルい運用をしています。
 
 ### feature/generic
+
 genericにはプロジェクト内共通の機能を担うディレクトリも作成します。<br>
 こちらもtodoディレクトリと同じようにcontainer、presenter、actions.tsなどを持ちます。こちらのディレクトリ内にはドメインを持ち（＝他のプロジェクトには流用できない）、アプリケーション内の様々な場所で汎用的に用いられる機能のロジックを記述します。<br>
 例えばヘッダに表示するユーザープロフィールコンポーネントなどはこちらに記述します。
 
 ### hooks
+
 hooksには機能を実現するために必要なAPIを叩くカスタムフックや、複雑なロジックをまとめるカスタムフックを記述します。
 
 ### cssVariables
+
 カラーコードやz-index、ヘッダの高さなどのcssにかかわる変数を管理するディレクトリです。<br>
+
 <!-- styled-componentを使っているのでtsファイルで管理します。 -->
 
 ### messages.ts
+
 エラーメッセージやバリデーションメッセージを管理するファイルです。
 
 ### reactQueryKeys.ts/recoilKeys.ts
+
 ReactQueryとrecoilは使用する際に一意なキーを設定しなければならないため１つのファイル内で一元管理し、重複しないようにします。
 
 ### utils
+
 汎用的に使える便利関数を管理するディレクトリです。
 
 ### lib
+
 ライブラリの初期設定などはこちらのディレクトリに記述します。
 
 ## 参考資料
-[](https://tech-blog.rakus.co.jp/entry/20230208/frontend)
-[](https://zenn.dev/sakito/articles/af87061a5016e6)
+
+[https://tech-blog.rakus.co.jp/entry/20230208/frontend](https://tech-blog.rakus.co.jp/entry/20230208/frontend)
+[https://zenn.dev/sakito/articles/af87061a5016e6](https://zenn.dev/sakito/articles/af87061a5016e6)
