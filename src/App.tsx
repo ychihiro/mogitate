@@ -1,7 +1,7 @@
 import React from "react";
-// import Header from "./components/Header";
-// import Kiwi from "./img/キウイ.jpg";
 import BaseLayout from "./components/ui/layout/BaseLayout";
+import Header from "./components/Header";
+import DetailPage from "./components/DetailPage";
 
 export const App = (): JSX.Element => {
   return (
@@ -15,6 +15,8 @@ export const App = (): JSX.Element => {
           <p>¥800</p>
         </div>
       </main> */}
+      <Header></Header>
+      <DetailPage></DetailPage>
     </div>
   );
 };
