@@ -1,8 +1,6 @@
 import React from "react";
 import "../css/Header.css";
-import BaseButton from "./ui/button/BaseButton";
-import BaseSelect from "./ui/select/BaseSelect";
-import BaseInput from "./ui/input/BaseInput";
+import { BaseButton, BaseInput, BaseSelect } from "../components/ui/index";
 
 export const Header: React.FC = () => {
   const seasonList = [

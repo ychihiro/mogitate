@@ -20,7 +20,7 @@ interface Props {
   change: () => void;
 }
 
-export const BaseButton: React.FC<Props> = (props) => {
+export const BaseSelect: React.FC<Props> = (props) => {
   const [selectValue, setSelectValue] = React.useState<string | undefined>();
 
   // ドロップダウンメニューの値が変更された時の処理
@@ -64,4 +64,4 @@ export const BaseButton: React.FC<Props> = (props) => {
   );
 };
 
-export default BaseButton;
+export default BaseSelect;
