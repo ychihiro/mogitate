@@ -1,13 +1,16 @@
 import React from "react";
-import { BaseLayout } from "./components/ui/index";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
+import { Routes, Route } from "react-router-dom";
 import DetailPage from "./components/DetailPage";
+import { TopPage } from "./components/pages/TopPage";
 
 export const App: React.FC = () => {
   return (
     <div className="App">
-      <BaseLayout></BaseLayout>
+      <h1>Home</h1>
+      <Routes>
+        <Route path="/" element={<TopPage />}></Route>
+        <Route path="/detail" element={<DetailPage />}></Route>
+      </Routes>
       {/* <Header></Header>
       <main>
         <div className="menu-box">
@@ -16,14 +19,6 @@ export const App: React.FC = () => {
           <p>¥800</p>
         </div>
       </main> */}
-      <DetailPage></DetailPage>
-      <Header></Header>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/"></Route>
-          <Route path="/detail" element={<DetailPage />}></Route>
-        </Routes>
-      </BrowserRouter>
     </div>
   );
 };
