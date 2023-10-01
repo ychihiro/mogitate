@@ -25,8 +25,6 @@ export const BaseSelect: React.FC<Props> = (props) => {
 
   // ドロップダウンメニューの値が変更された時の処理
   const onChange = (event: SelectChangeEvent<unknown>): void => {
-    console.log("onChange");
-    console.log(selectValue);
     setSelectValue(event.target.value as string);
     props.change();
   };
