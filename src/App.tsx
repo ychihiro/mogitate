@@ -1,8 +1,10 @@
 import React from "react";
 import { BaseLayout } from "./components/ui/index";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import DetailPage from "./components/DetailPage";
 
-export const App = (): JSX.Element => {
+export const App: React.FC = () => {
   return (
     <div className="App">
       <BaseLayout></BaseLayout>
@@ -15,6 +17,13 @@ export const App = (): JSX.Element => {
         </div>
       </main> */}
       <DetailPage></DetailPage>
+      <Header></Header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/"></Route>
+          <Route path="/detail" element={<DetailPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };

@@ -24,7 +24,7 @@ export const DetailPage = (): JSX.Element => {
   }, []);
   return (
     <div>
-      <p>{}</p>
+      <p>aaa</p>
       <BaseButton text="購入ページ"></BaseButton>
     </div>
   );
