@@ -1,16 +1,16 @@
 body {
-    background-color: #FDFEFE;
+  background-color: #fdfefe;
 }
 
 input,
 select {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 img {
-    display: block;
+  display: block;
 }
 
 ::placeholder {
-    color: #E0DFDE;
+  color: #e0dfde;
 }

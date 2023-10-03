@@ -1,1 +1,1 @@
-export type ErrorResponse = any
+export type ErrorResponse = any;
