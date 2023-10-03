@@ -20,7 +20,7 @@ export const App: React.FC = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/"></Route>
-          <Route path="/detail" element={<DetailPage />}></Route>
+          <Route path="/detail/:productId" element={<DetailPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
