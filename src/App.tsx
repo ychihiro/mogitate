@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BaseLayout from "./components/ui/layout/BaseLayout";
 import Header from "./components/Header";
 import DetailPage from "./components/DetailPage";
+import { NotFoundPage } from "./components/NotFoundPage";
 
 export const App: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/"></Route>
           <Route path="/detail/:productId" element={<DetailPage />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
